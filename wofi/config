@@ -1,9 +1,9 @@
 show=drun
-width=750
-height=400
+width=600
+height=330
 always_parse_args=true
-show_all=false
-term=kitty
+show_all=true
+term=ghostty
 hide_scroll=true
 print_command=true
 insensitive=true
