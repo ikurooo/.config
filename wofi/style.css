@@ -63,7 +63,6 @@ window {
   border: 0.16em solid @lavender;
   border-radius: 1em;
   background-color: @base;
-  animation: slideIn 0.5s ease-in-out both;
 }
 
 /* Slide In */
@@ -83,7 +82,6 @@ window {
   padding: 10px;
   border: none;
   background-color: @base;
-  animation: fadeIn 0.5s ease-in-out both;
 }
 
 /* Fade In */
