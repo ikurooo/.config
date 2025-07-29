@@ -9,24 +9,24 @@ vim.opt.termguicolors = true
 vim.opt.wrap = false
 vim.o.cmdheight = 0
 
-vim.cmd('filetype plugin on')
-vim.cmd('set rnu!')
-vim.cmd('set nu!')
+vim.cmd("filetype plugin on")
+vim.cmd("set rnu!")
+vim.cmd("set nu!")
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = '●',
-  },
-  signs = true,
-  underline = true,
-  severity_sort = true,
-  float = {
-    border = "rounded",
-  },
+	virtual_text = {
+		prefix = "●",
+	},
+	signs = true,
+	underline = true,
+	severity_sort = true,
+	float = {
+		border = "rounded",
+	},
 })
 
 require("config.lazy")
