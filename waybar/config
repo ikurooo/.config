@@ -15,10 +15,10 @@
     "modules-right": [
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
         "backlight",
         "keyboard-state",
         "sway/language",
+        "power-profiles-daemon",
         "battery",
         "battery#bat2",
         "clock",

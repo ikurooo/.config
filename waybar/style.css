@@ -59,6 +59,7 @@ button:hover {
 #mpd,
 #language,
 #keyboard-state,
+#upower,
 #privacy-item {
     background: transparent;
     color: #cdd6f4;
@@ -75,18 +76,15 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f38ba8;
-    color: #1e1e2e;
+    color: #f38ba8;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #89b4fa;
-    color: #1e1e2e;
+    color: #89b4fa;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #a6e3a1;
-    color: #1e1e2e;
+    color: #a6e3a1;
 }
 
 #network.disconnected,
