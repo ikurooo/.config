@@ -4,7 +4,15 @@
 }
 
 window#waybar {
-    background-color: #1e1e2e;
+    background: transparent;
+}
+
+window > box {
+    margin: 0px 10px 10px 10px;
+    background-image: linear-gradient(45deg, #1e1e2e, #1e1e2e), linear-gradient(150deg, rgba(114, 135, 253, 0.93) 0%, rgba(234, 118, 203, 0.87) 50%, rgba(234, 170, 203, 0.87) 100%);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
     border-radius: 10px;
     color: #cdd6f4;
     transition-property: background-color;
