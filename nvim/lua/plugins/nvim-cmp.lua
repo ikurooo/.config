@@ -5,6 +5,7 @@ return {
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-buffer",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -20,14 +21,14 @@ return {
 			},
 			mapping = {
 				["<Esc>"] = require("cmp").mapping.abort(),
-				["<CR>"] = require("cmp").mapping.confirm(),
+				["<CR>"] = require("cmp").mapping.confirm({ select = true }),
 				["<Down>"] = require("cmp").mapping.select_next_item(),
 				["<Up>"] = require("cmp").mapping.select_prev_item(),
 			},
-			sources = {
+			sources = cmp.config.sources({
 				{ name = "nvim_lsp", max_item_count = 10 },
 				{ name = "buffer", max_item_count = 5 },
-			},
+			}),
 		})
 	end,
 }

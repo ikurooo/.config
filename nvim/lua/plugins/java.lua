@@ -3,6 +3,21 @@
 -- yay -S java-lombok
 -- cp -r /usr/share/java/jdtls/config_linux ~/.cache/jdtls/config_linux
 
+local on_attach = function(client, bufnr)
+	local opts = { noremap = true, silent = true, buffer = bufnr }
+
+	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+	vim.keymap.set("n", "ss", vim.lsp.buf.signature_help, opts)
+	vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
+	vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, opts)
+	vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
+
+	-- Java-specific (jdtls) extension
+	local jdtls = require("jdtls")
+	vim.keymap.set("n", "<C-o>", jdtls.organize_imports, opts)
+end
+
 return {
 	{
 		"mfussenegger/nvim-jdtls",
@@ -48,6 +63,8 @@ return {
 						init_options = {
 							bundles = {},
 						},
+						on_attach = on_attach,
+						signatureHelp = { enabled = true },
 					}
 
 					jdtls.start_or_attach(config)
